@@ -1,0 +1,722 @@
+﻿@model DealerWebApp.DealertWeb.Models.MPortadas
+
+<!--Service-->
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="section-heading text-uppercase">NUESTROS SERVICIOS</h3>
+            <h4 class="section-subheading text-muted"></h4>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                @*  fas fa-circle fa-stack-2x*@
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-thermometer-empty fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                    @*<i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>*@
+                </span>
+                <h4 class="my-3">CAMBIO DE ACEITE & FILTRO</h4>
+                <p class="text-muted"></p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">REVISION COMPUTARIZADA</h4>
+                <p class="text-muted"></p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    @*   <i class="fas fa-lock fa-stack-1x fa-inverse"></i>*@
+                    <i class="fa fa-car fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>
+                <h4 class="my-3">INSTALACION DE LUZ LED & SONIDO</h4>
+                <p class="text-muted"></p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-car fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>
+                <h4 class="my-3">BALANCEO</h4>
+                <p class="text-muted"></p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-life-ring fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>
+                <h4 class="my-3">SISTEMA DE FRENO</h4>
+                <p class="text-muted"></p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa-thin fa-screwdriver-wrench fa-stack-2x fa-inverse" aria-hidden="true"></i>
+                    <i class="fa fa-wrench fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>
+                <h4 class="my-3">DESABOLLADURA & PINTURA</h4>
+                <p class="text-muted"></p>
+            </div>
+            <!--INFORME DE GARANTIA-->
+            <div class="col-md-12">
+                <p class="text-muted">
+                    Todos nuestro servicios son realizado por un personal altamente capacitado, con más de cinco
+                    años de experiencia.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--INFORME-->
+<!--Catalogo de Auto-->
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="section-heading text-uppercase">Nuestras Marcas</h3>
+            <h4 class="section-subheading text-muted">Somos distrifuidores de la mejores marca de automovil</h4>
+        </div>
+        <div class="row">
+            @foreach (var mBrands in Model.MBrands)
+            {
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="@Url.Action("Index", "Brands", new {Id = mBrands.BrandId })">
+                            <div class="portfolio-hover" style="border-radius:20px !important;">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="@mBrands.UrlImg" alt="" />
+                        </a>
+                        <div class="portfolio-caption" style="border-radius:10px !important;">
+                            <div class="portfolio-caption-heading">@mBrands.NameBrand</div>
+                            <div class="portfolio-caption-subheading text-muted">Más...</div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @* <div class="row">
+            @* <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/assets/img/portfolio/02-thumbnail.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Explore</div>
+            <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+            </div>
+            </div>
+            </div>*@
+        <!--Honda-->
+        @*<div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#porftolioModal1">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/honda-logo-v1.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">HONDA</div>
+            <div class="portfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--Mercedes Benz-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid myimg" src="~/Tema/img marca/Logo/mersedes-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">MERCEDES BENZ</div>
+            <div class="portfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--Acura-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/acura-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">ACURA</div>
+            <div class="portfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--volkswagen-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/volkswagen-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">VOLKSWAGEN</div>
+            <div class="portfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--PEUGEOT-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/peugeot-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">PEUGEOT</div>
+            <div class="portfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--MAZDA-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/mazda-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">MAZDA</div>
+            <div class="portfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--TOYOTA-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+            <div class="porfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/toyota-logos.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">TOYOTA</div>
+            <div class="portfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--LEXUS-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/lexus-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">LEXUS</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--FIAT-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/fiat-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">FIAT</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--KIA-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/kia-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">KIA</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--AUDI-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/audi-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">AUDI</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--INFINITI-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/infiniti-logo-2.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">INFINITI</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--BMW-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/bmw-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">BMW</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--HYUNDAI-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/hyundai-logo-v1.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">HYUNDAI</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--SUZUKI-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/suzuki-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">SUZUKI</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--MINI-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/mini-logo-3d.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">MINI</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--RENAULT-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/renault-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">RENAULT</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--CHEVROLET-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/chevrolet-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">CHEVROLET</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--SUBARU-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/subaru-logo-3d.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">SUBARU</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--PORSCHE-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/porsche-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">PORSCHE</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--TESLA-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/tesla-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">TESLA</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--LAND ROVER-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/land-rover-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">LAND ROVER</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--LINCOLN-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/lincoln-logo.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">LINCOLN</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--NISSAN-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/nissan-logo-3d.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">NISSAN</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--JEEP-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/jeep-logo-3d.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">JEEP</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--VOLVO-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/volvo-logo-3d.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">VOLVO</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--MITSUBISHI-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/mitsubishi-logo-3d1.webp" alt="" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">MITSUBISHI</div>
+            <div class="porfolio-caption-subheading text-muted">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--JAC-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/jac-logo.webp" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">JAC</div>
+            <div class="portfolio-caption-subheading">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--FORD-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/ford-logo.webp" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">FORD</div>
+            <div class="portfolio-caption-subheading">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--GMC-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/gmc-logo.webp" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">GMC</div>
+            <div class="portfolio-caption-subheading">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--DODGE-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/dodge-logo.webp" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">DODGE</div>
+            <div class="portfolio-caption-subheading">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--DAIHATSU-->
+            <div class="col-lg-4 col-sm-6 mb-4 ">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/daihatsu-logo.webp" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">DAIHATSU</div>
+            <div class="portfolio-caption-subheading">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--CADILLAC-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="~/Tema/img marca/Logo/cadillac-logo.webp" />
+            </a>
+            <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">CADILLAC</div>
+            <div class="portfolio-caption-subheading">Más...</div>
+            </div>
+            </div>
+            </div>
+            <!--FIN DEL DIV ROW-->
+            </div>*@
+        @* </div>*@
+    </div>
+</section>
+<!--About-->
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="section-heading text-uppercase">Acerca de nuestro Dealer</h3>
+            <h4 class="section-subheading text-muted">Somos tu mejor elección a la hora de adquirir tu auto</h4>
+        </div>
+        <div>
+            <br />
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="" alt="" />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>GARANTIA DE MANTENIMIENTO</h4>
+                        <p class="text-muted">Te brindamos una garantía de mantenimiento por un año y seis meses en las siguientes marcas</p>
+                        <p class="text-muted">MASERATI, CADILLAC, JEEP, LAND ROVER, LINCOLN, PORSCHE, TESLA, MERCEDES BENZ</p>
+                        <h4 class="subheading">Para la des más marca la garantía es solo por ocho meses</h4>
+                    </div>
+                    @* <div class="timeline-body">
+                        <p class="text-muted">
+                        <p class="text-muted">
+
+                        </p>
+                        <p class="text-muted">
+
+                        </p>
+                        </div>*@
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="" alt="" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>SEGUROS PARA TU VEHICULO</h4>
+                        <h4 class="subheading"></h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Grado D</p>
+                        <p class="text-muted">Grado C</p>
+                        <p class="text-muted">Grado B</p>
+                        <p class="text-muted">Grado B Full</p>
+                        <p class="text-muted">Grado A</p>
+                        <p class="text-muted">Grado A Full</p>
+                        <h4 class="subheading">La adquisición de cualquiera de esto seguro, te cubre los dos primero daño gratis</h4>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="" alt="" />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>INSTALACCION DE GPS</h4>
+                        <h4 class="subheading"></h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Al realizar la instalación de GPS, con nosotro al igual que tú, 
+                            nos encargamos de la vigilancia de tu vehiculo, por un año y diez meses.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--Contact-->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="section-heading text-uppercase">CONTATANOS</h3>
+            <h4 class="section-subheading text-muted">Te responderemos con la mayor brevedad.</h4>
+            <h5 class="section-subheading text-muted">Te brindaremos una asesoría con veracidad. Para que realice tu mejor elección.</h5>
+        </div>
+        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="row align-items-stretch mb-5">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input class="form-control" id="name" type="text" placeholder="Nombre Completo (*)" required="required" data-validation-required-message="Por favor, Ingrese su nombre completo" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="email" type="text" placeholder="Correo Electrónico (*)" required="required" data-validation-required-message="Por favor, Ingrese su correo electrónico" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="phone" type="tel" placeholder="Tel. o Cel. (*)" required="required" data-validation-required-message="Por favor, Ingrese su número de Tel.: o Cel.:" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-md-0">
+                    <div class="form-group form-group-textarea mb-md-0">
+                        <textarea class="form-control" id="message" placeholder="Escribe tu mensaje aquí... (*)" required="required" data-validation-required-message="Please enter a message."></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div id="success"></div>
+                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>

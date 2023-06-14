@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] MAT-DEARLE</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/DealerWebAPP.styles.css" asp-append-version="true" />*@
+    <!--ENLACE DE LA PLANTILLA DE BOOTSTRAP-->
+    @*    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />*@
+    @*<link href="https://fonts.google.com/icons?icon.set=Material+Symbols" crossorigin="anonymou" />*@
+    <link rel="icon" type="image/x-icon" href="Tema/assets/img/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link href="~/Tema/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <!--Navbar por Defetp-->
+        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DealerWebAPP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </li>
+            </ul>
+            </div>
+            </div>
+            </nav>*@
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                @* <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="Tema/assets/img/navbar-logo.svg" alt="" /></a>*@
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        @*<li class="nav-item"><a class="nav-link js-scroll-trigger" asp-area="" asp-controller="" asp-action="#service">Services</a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" asp-area="" asp-controller="" asp-action="#portfolio">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" asp-area="" asp-controller="" asp-action="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" asp-area="" asp-controller="" asp-action="#team">Team</a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" asp-area="" asp-controller="" asp-action="#contact">Contact</a></li>*@
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Service</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Brand</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Welcome! MAT Car Dealership</div>
+            <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left"></div> <!--PARA ALINIEAR LO ICONO DE FOOTER-->
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-pinterest-p"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-reddit"></i></a>
+                    <div class="col-lg-4 text-lg-right"></div><!--PARA ALINIEAR LO ICONO DE FOOTER-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    @*$(MSBuildProjectName)--Assemby Name*@
+    @*$(MSBuildProjectName.Replace(" ", "_")) Defoult namepace*@
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left">© MAT Car Dealership 2025-2030</div>
+                @*<div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-pinterest-p"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                    </div>*@
+                <div class="col-lg-4 text-lg-right">
+                    <a class="mr-3" href="#!">....</a>
+                    <a href="#!">...</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+        &copy; 2023 - DealerWebAPP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("wwwroot/Tema/assets/img", required: false)
+
+
+    <!--RENDER DE LA PLANTILLA NUEVA DE BOOTSTRAP-->
+    @*Scripts.Render("~/Content/Tema/JSTEMA/js/scripts.js")
+        @*Scripts.Render("~/Content/Tema/assets/img")
+        <script src="~/Tema/js/scripts.js"></script>*@
+
+    <!--SCRIPT DE LA PLANTILLA NUEVA DE BOOTSTRAP-->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="~/Tema/assets/mail/jqBootstrapValidation.js"></script>
+    <script src="~/Tema/assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/Tema/js/scripts.js"></script>
+</body>
+</html>

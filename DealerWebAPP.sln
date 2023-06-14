@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.33530.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerWebApp", "DealerWebAPP\DealerWebApp.csproj", "{B0545BC2-7604-41A4-A77A-A251ED663569}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DealertWeb", "DealertWeb", "{A15851B6-1959-4B14-8F1C-374B0ABD6E48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0545BC2-7604-41A4-A77A-A251ED663569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0545BC2-7604-41A4-A77A-A251ED663569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0545BC2-7604-41A4-A77A-A251ED663569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0545BC2-7604-41A4-A77A-A251ED663569}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0545BC2-7604-41A4-A77A-A251ED663569} = {A15851B6-1959-4B14-8F1C-374B0ABD6E48}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DF456A7-ED19-491C-B32C-7D78EE487FC0}
+	EndGlobalSection
+EndGlobal

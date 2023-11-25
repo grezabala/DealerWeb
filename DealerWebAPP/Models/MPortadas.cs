@@ -6,6 +6,6 @@
 
         public string? Name { get; set; }
 
-        public List<MBrands> MBrands { get; set; }
+        public List<MBrands>? MBrands { get; set; }
     }
 }

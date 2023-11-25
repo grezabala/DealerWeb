@@ -4,7 +4,7 @@
 <section class="page-section" id="services">
     <div class="container">
         <div class="text-center">
-            <h3 class="section-heading text-uppercase">NUESTROS SERVICIOS</h3>
+            <h4 class="section-heading text-uppercase">NUESTROS SERVICIOS</h4>
             <h4 class="section-subheading text-muted"></h4>
         </div>
         <div class="row text-center">
@@ -15,7 +15,7 @@
                     <i class="fa fa-thermometer-empty fa-stack-1x fa-inverse" aria-hidden="true"></i>
                     @*<i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>*@
                 </span>
-                <h4 class="my-3">CAMBIO DE ACEITE & FILTRO</h4>
+                <h5 class="my-3">CAMBIO DE ACEITE & FILTRO</h5>
                 <p class="text-muted"></p>
             </div>
             <div class="col-md-4">
@@ -23,7 +23,7 @@
                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
                     <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4 class="my-3">REVISION COMPUTARIZADA</h4>
+                <h5 class="my-3">REVISION COMPUTARIZADA</h5>
                 <p class="text-muted"></p>
             </div>
             <div class="col-md-4">
@@ -32,7 +32,7 @@
                     @*   <i class="fas fa-lock fa-stack-1x fa-inverse"></i>*@
                     <i class="fa fa-car fa-stack-1x fa-inverse" aria-hidden="true"></i>
                 </span>
-                <h4 class="my-3">INSTALACION DE LUZ LED & SONIDO</h4>
+                <h5 class="my-3">INSTALACION DE LUZ LED & SONIDO</h5>
                 <p class="text-muted"></p>
             </div>
             <div class="col-md-4">
@@ -40,7 +40,7 @@
                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa-car fa-stack-1x fa-inverse" aria-hidden="true"></i>
                 </span>
-                <h4 class="my-3">BALANCEO</h4>
+                <h5 class="my-3">BALANCEO</h5>
                 <p class="text-muted"></p>
             </div>
             <div class="col-md-4">
@@ -48,7 +48,7 @@
                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa-life-ring fa-stack-1x fa-inverse" aria-hidden="true"></i>
                 </span>
-                <h4 class="my-3">SISTEMA DE FRENO</h4>
+                <h5 class="my-3">SISTEMA DE FRENO</h5>
                 <p class="text-muted"></p>
             </div>
             <div class="col-md-4">
@@ -57,7 +57,7 @@
                     <i class="fa-thin fa-screwdriver-wrench fa-stack-2x fa-inverse" aria-hidden="true"></i>
                     <i class="fa fa-wrench fa-stack-1x fa-inverse" aria-hidden="true"></i>
                 </span>
-                <h4 class="my-3">DESABOLLADURA & PINTURA</h4>
+                <h5 class="my-3">DESABOLLADURA & PINTURA</h5>
                 <p class="text-muted"></p>
             </div>
             <!--INFORME DE GARANTIA-->
@@ -79,7 +79,7 @@
             <h4 class="section-subheading text-muted">Somos distrifuidores de la mejores marca de automovil</h4>
         </div>
         <div class="row">
-            @foreach (var mBrands in Model.MBrands)
+            @foreach (var mBrands in Model.MBrands!)
             {
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
@@ -90,8 +90,8 @@
                             <img class="img-fluid" src="@mBrands.UrlImg" alt="" />
                         </a>
                         <div class="portfolio-caption" style="border-radius:10px !important;">
-                            <div class="portfolio-caption-heading">@mBrands.NameBrand</div>
-                            <div class="portfolio-caption-subheading text-muted">Más...</div>
+                            <div class="portfolio-caption-heading" @*style="font-size: 20px;"*@>@mBrands.NameBrand</div>
+                            <div class="portfolio-caption-subheading text-muted">Catalogo de la Marca.</div>
                         </div>
                     </div>
                 </div>
@@ -617,8 +617,11 @@
 <section class="page-section" id="about">
     <div class="container">
         <div class="text-center">
-            <h3 class="section-heading text-uppercase">Acerca de nuestro Dealer</h3>
-            <h4 class="section-subheading text-muted">Somos tu mejor elección a la hora de adquirir tu auto</h4>
+            <h5 class="section-heading text-uppercase">Otros servicios que te brindamos</h5>
+            <h5 class="section-subheading text-muted text-tam">
+                Somos tu mejor elección a la hora de adquirir tu auto,
+                y para darle mantenimiento y para mantenerlo seguro.
+            </h5>
         </div>
         <div>
             <br />
@@ -626,14 +629,14 @@
         <ul class="timeline">
             <li>
                 <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="" alt="" />
+                    <img class="rounded-circle img-fluid" src="~/Tema/imge/garantia.jpeg" alt="" />
                 </div>
                 <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>GARANTIA DE MANTENIMIENTO</h4>
+                    <div class="timeline-heading text-tam">
+                        <h5 class="text-muted">GARANTIA DE MANTENIMIENTO</h5>
                         <p class="text-muted">Te brindamos una garantía de mantenimiento por un año y seis meses en las siguientes marcas</p>
                         <p class="text-muted">MASERATI, CADILLAC, JEEP, LAND ROVER, LINCOLN, PORSCHE, TESLA, MERCEDES BENZ</p>
-                        <h4 class="subheading">Para la des más marca la garantía es solo por ocho meses</h4>
+                        <p class="text-muted">Para la des más marca la garantía es solo por ocho meses</p>
                     </div>
                     @* <div class="timeline-body">
                         <p class="text-muted">
@@ -647,41 +650,66 @@
                 </div>
             </li>
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="" alt="" /></div>
+                <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="~/Tema/imge/seguro.jpg" alt="" />
+                </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4>SEGUROS PARA TU VEHICULO</h4>
-                        <h4 class="subheading"></h4>
+                        <h5 class="text-muted">SEGUROS PARA TU VEHICULO</h5>
+                        <h5 class="subheading"></h5>
                     </div>
-                    <div class="timeline-body">
+                    <div class="timeline-body text-tam">
                         <p class="text-muted">Grado D</p>
                         <p class="text-muted">Grado C</p>
                         <p class="text-muted">Grado B</p>
                         <p class="text-muted">Grado B Full</p>
                         <p class="text-muted">Grado A</p>
                         <p class="text-muted">Grado A Full</p>
-                        <h4 class="subheading">La adquisición de cualquiera de esto seguro, te cubre los dos primero daño gratis</h4>
+                        <p class="text-muted">La adquisición de cualquiera de esto seguro, te cubre los dos primero daño gratis</p>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="" alt="" />
+                    <img class="rounded-circle img-fluid" src="~/Tema/imge/gps.jpg" alt="" />
                 </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4>INSTALACCION DE GPS</h4>
+                        <h5 class="text-muted">INSTALACCION DE GPS</h5>
                         <h4 class="subheading"></h4>
                     </div>
-                    <div class="timeline-body">
-                        <p class="text-muted">Al realizar la instalación de GPS, con nosotro al igual que tú, 
-                            nos encargamos de la vigilancia de tu vehiculo, por un año y diez meses.</p>
+                    <div class="timeline-body text-tam">
+                        <p class="text-muted">
+                            Al realizar la instalación de GPS, con nosotro al igual que tú,
+                            nos encargamos de la vigilancia de tu vehiculo, por un año y diez meses.
+                        </p>
                     </div>
                 </div>
             </li>
         </ul>
     </div>
 </section>
+<!--Ubicació de los punto de venta-->
+@*<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="section-heading">Dealer Principal</h5>
+            <p class="help-block"></p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p>
+                    Avenida Sarasota Esq. Arrayanes,
+                    3er. Nivel, Local 12C, Santo Domingo.
+                </p>
+                <p>Teléfono: 809-620-8372</p>
+            </div>
+            <div class="col-lg-9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.3610904173809!2d-69.95125170694399!3d18.45091904241812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea5620fdde26cbb%3A0x59c4dbb0b06a0e2f!2sUepa!5e0!3m2!1ses-419!2sdo!4v1678344297360!5m2!1ses-419!2sdo" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>*@
 <!--Contact-->
 <section class="page-section" id="contact">
     <div class="container">

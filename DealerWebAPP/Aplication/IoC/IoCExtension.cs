@@ -38,10 +38,8 @@ namespace DealerWebApp.DealertWeb.Aplication.IoC
         /// <returns></returns>
         public static IServiceCollection AddDealerServices(this IServiceCollection services)
         {
-            //services.AddSingleton<IContactosService, ContactosService>();
-            services.AddSingleton<ICarsService, CarsServices>();
-
-
+            services.AddScoped(typeof(IContactosService), typeof(ContactosService));
+            services.AddScoped<ICarsService, CarsServices>();
 
             return services;
 

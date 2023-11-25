@@ -32,14 +32,23 @@ app.MapControllerRoute(
 
 app.Run();
 
+
+builder.Services.AddScoped(typeof(IContactosService), typeof(ContactosService));
+
+//builder.Services.AddDealerServices(); //Llamada al IoCExtension para utilizar los servicio
+
 builder.Services.AddRazorPages();
+
 builder.Services.AddMvcCore();
+
 builder.Services.AddControllers();
+
 builder.Services.AddHttpContextAccessor();
 
-//Llamada al IoCExtension para utilizar los servicio
+builder.Services.AddMvc();
 
-builder.Services.AddDealerServices();
 
-builder.Services.AddTransient(typeof(IContactosService), typeof(ContactosService));
+
+
+//builder.Services.AddTransient(typeof(IContactosService), typeof(ContactosService));
 

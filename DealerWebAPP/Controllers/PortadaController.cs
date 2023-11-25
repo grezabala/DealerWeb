@@ -7,14 +7,44 @@ namespace DealerWebApp.DealertWeb.Controllers
 {
     public class PortadaController : Controller
     {
+        //private IContactosService ContactosService;
 
-        //private readonly IContactosService _ContactosService;
+        //public PortadaController(IContactosService contactosService) => ContactosService = contactosService;
+      
 
-        public PortadaController()
+        [HttpGet]
+        public IActionResult Index()
         {
-           //_ContactosService = contactosService;
+            var brand = _GetMBrands();
+            var portada = new MPortadas();
+            portada.MBrands = brand;
+            return View(portada);
         }
 
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(ContactosDto contactosDto)
+        {
+            //if (ModelState.IsValid)
+            //{
+            //    var addContactos = await ContactosService.Add(contactosDto);
+            //    if (addContactos != null)
+            //        return View(addContactos);
+            //}
+            //else
+            //{
+            //    return BadRequest();
+            //}
+
+            return View();
+        }
+
+        //METODO LIST
         private List<MBrands> _GetMBrands()
         {
             List<MBrands> _ListMBrands = new List<MBrands>()
@@ -289,38 +319,6 @@ namespace DealerWebApp.DealertWeb.Controllers
             };
 
             return _ListMBrands;
-        }
-
-        [HttpGet]
-        public IActionResult Index()
-        {
-            var brand = _GetMBrands();
-            var portada = new MPortadas();
-            portada.MBrands = brand;
-            return View(portada);
-        }
-
-        [HttpGet]
-        public IActionResult Add()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Add(ContactosDto contactosDto)
-        {
-            if (ModelState.IsValid)
-            {
-                //var addContactos = await _ContactosService.Add(contactosDto);
-                //if (addContactos != null)
-                //    return View(addContactos);
-            }
-            else
-            {
-                return BadRequest();
-            }
-
-            return View();
         }
     }
 }

@@ -9843,6 +9843,10 @@ a.text-dark:hover, a.text-dark:focus {
   color: #212529 !important;
 }
 
+.text-tam {
+    font-size: 14px !important;
+}
+
 .text-muted {
   color: #6c757d !important;
 }

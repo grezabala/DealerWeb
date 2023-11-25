@@ -5,7 +5,6 @@ C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\De
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\DealerWebApp.DealertWeb.deps.json
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\DealerWebApp.DealertWeb.runtimeconfig.json
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\DealerWebApp.DealertWeb.dll
-C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\ref\DealerWebApp.DealertWeb.dll
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\DealerWebApp.DealertWeb.pdb
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\bin\Debug\net6.0\Azure.Identity.dll
@@ -88,3 +87,9 @@ C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\re
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\DealerWebApp.DealertWeb.pdb
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\DealerWebApp.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\DealerWebApp.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\staticwebassets\msbuild.DealerWebApp.DealertWeb.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\staticwebassets\msbuild.build.DealerWebApp.DealertWeb.props
+C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.DealerWebApp.DealertWeb.props
+C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.DealerWebApp.DealertWeb.props
+C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\DELL\Desktop\Archivos\MVC\DealerWebAPP\DealerWebAPP\obj\Debug\net6.0\refint\DealerWebApp.DealertWeb.dll
